@@ -1,0 +1,200 @@
+#logo-img{
+    width: 10rem;
+    height: 3rem;
+}
+nav{
+    font-weight: bold;
+    font-size: large;
+    font-family: Opensans, sans-serif;
+}
+
+.carousel-inner .carousel-item img{
+height: 90vh;
+}
+
+.indivisual-card:hover{
+transform:scale(1.1);
+transition-timing-function: ease-in-out;
+transition-duration: 0.5s;
+}
+
+
+/* footer */
+
+.footer-section{
+color:white;
+background-color: #212529 ;
+}
+
+.footer-1 img{
+    width: 10rem;
+    height: 3rem;
+}
+
+.footer-1 ul li{
+    list-style: none;
+    padding-bottom: 3px;
+
+}
+
+.footer-1 ul li a{
+text-decoration: none;
+color: #d8d6d8;
+}
+
+
+.footer-1 ul li:hover{
+    transform: scale(1.05);
+   
+}
+
+
+
+
+footer h5{
+    font-size: 1.2rem;
+    color: #d8d6d8;
+    font-weight: 700;
+}
+
+footer .copyright a{
+    color: black;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 38px;
+    transition: 0.6s ease;
+    margin: 0 5px;
+    text-align: center;
+
+}
+
+footer .copyright a:hover{
+    color: white;
+    background-color: greenyellow;
+}
+
+.copyright img{
+ width: 10rem;
+  height: 3rem;;
+}
+
+
+.navbar-toggler{
+    background-color: white;
+}
+
+
+
+.team-main-div{
+display: flex; 
+justify-content: center;
+}
+
+.indivisual-team-member{
+    height: 15rem;
+    width: 15rem;
+    margin: 20px 20px;
+    border-radius: 50%;
+
+    
+}
+.team-photo{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    background-color: red;
+    background-image: url(img/img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.team-photo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+.view-all-team{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.view-all-team a{
+    text-decoration: none;
+    text-align: center;
+    font-size: large;
+    color: black;
+}
+
+.view-all-team a:hover{
+    color: blue;
+}
+
+@media screen and (max-width: 600px) {
+    .team-main-div{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+    }
+    .indivisual-team-member{
+      text-align: center;
+    }
+}
+
+
+.main{
+    background-color: white;
+    padding: 1rem 1rem;
+}
+
+.popular-posts{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 12px;
+    margin-top: 2rem;
+    
+}
+
+
+.post-img img{
+   height:80%;
+   width: 90%;
+}
+
+
+.single-blog-container{
+    margin: 2rem 0rem;
+
+}
+
+.single-blog-container:hover{
+    transform: scale(1.1);
+    transition-duration: 0.9s;
+}
+
+.all-blog-container a{
+    text-decoration: none;
+}
+
+
+.single-team-container{
+    margin: 2rem 0rem;
+
+}
+
+.single-team-container:hover{
+    transform: scale(1.1);
+    transition-duration: 0.9s;
+}
+
+.all-team-container a{
+    text-decoration: none;
+}
+
