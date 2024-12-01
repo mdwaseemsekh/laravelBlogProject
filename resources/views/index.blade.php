@@ -1,6 +1,10 @@
 @extends('layout.layout')
 @section('Home','WebQuickSolution')
 @section('content')
+
+<style>
+  
+    </style>
     <!-- carousel starts here -->
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -38,7 +42,7 @@
                 <div class="card">
                     <img src="img/Image-Maintenance.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Website Mainatance</h5>
+                        <h5 class="card-title">Website Development</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Know More.</a>
                     </div>
@@ -58,7 +62,7 @@
                 <div class="card">
                     <img src="img/6.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Server Image-Maintenance</h5>
+                        <h5 class="card-title">Server Maintenance</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Know More.</a>
                     </div>
@@ -68,7 +72,7 @@
                 <div class="card">
                     <img src="img/6.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Server Image-Maintenance</h5>
+                        <h5 class="card-title">App Development</h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="btn btn-primary">Know More.</a>
                     </div>
@@ -77,7 +81,34 @@
 
         </div>
     </div>
+<br> 
+<br>
+    
+    <div class="container">
+    <div class="index-recent-blog row">
+       <h2 class="text-center">Our Latest Blogs</h2>
+       <hr>
+       <!-- single blog container -->
+        @foreach($blogs as $blog)
+        <div class="col-sm-6 col-md-4 col-lg-3 index-single-blog">
+        <a href="/blog/{{$blog['slug']}}">
+           <div class="card index-single-blog">
+               <img src="{{ asset('storage/' . $blog->image) }}" class="card-img-top" alt="...">
+               <div class="card-body">
+               <h5 class="card-text">{{ substr(strip_tags($blog['title']), 0, 20) }}...</h5>
+                <p>{{ substr(strip_tags($blog['content']), 0, 55) }}...</p>
 
+                 <button class="btn btn-primary">Read More.</button>
+               </div>
+             </div>
+           </a>
+            </div>
+<!-- single container ends here -->
+        @endforeach
+       
+      <a href="/blogs">View All</a>
+
+    </div>
 
     <!-- Our Team -->
     <div>
@@ -86,45 +117,25 @@
         </h4>
         <hr>
     </div>
-
     <div class="team-main-div container">
+        @foreach($teamMembers as $team)
         <div class=" indivisual-team-member">
-            <div class="team-photo">
-                <img src="img/img.jpg" alt="">
+            <div class="team-photo text-center">
+                <img src="img/team/{{$team['photo']}}" alt="">
             </div>
-            <div class="">
-                <h5>Md Waseem Sekh</h5>
-                PHP Developer
+            <div>
+                <h5 class="text-center" >{{$team['name']}}</h5>
+                <h6 class="text-center">{{$team['role']}} </h6>
             </div>
         </div>
-
-        <div class=" indivisual-team-member">
-            <div class="team-photo">
-                <img src="img/img.jpg" alt="">
-            </div>
-            <div class="">
-                <h5>Md Waseem Sekh</h5>
-                PHP Developer
-            </div>
-        </div>
-
-        <div class=" indivisual-team-member">
-            <div class="team-photo">
-                <img src="img/img.jpg" alt="">
-            </div>
-            <div class="">
-                <h5>Md Waseem Sekh</h5>
-                PHP Developer
-            </div>
-        </div>
+        @endforeach
 
 
 
-        <div class="view-all-team">
+        <div class="view-all-team text-center">
             <a href="#">View All</a>
         </div>
 
     </div>
-
 
 @endsection

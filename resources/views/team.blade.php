@@ -1,4 +1,6 @@
 @extends('layout.layout')
+@section('title','Team-WebQuickSolution')
+
 
 @section('content')
 
@@ -10,50 +12,30 @@
 </div>
   
 <div class="all-team-container row">
-   
-    <!-- single team container -->
-    <div class="single-team-container col-sm-12 col-md-6 col-lg-4 px-4">
-        <a href="blog.html">
-        <div class="card">
-            <img src="img/img.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="name-of-team text-center"><h5>John Doe</h5></div><hr>
-              <div class="role-of-team text-center"><h6>PHP Developer</h6></div>
+<div class="all-team-container row">
+    @foreach($teamMembers as $teamMember)
+        <!-- Single team container -->
+        <div class="single-team-container col-sm-12 col-md-6 col-lg-4">
+            <div class="card">
+                <div class="team-img">
+                <img src="{{ asset('img/team/'. $teamMember['photo']) }}" class="card-img-top" alt="{{ $teamMember['name'] }}">
+                </div>
+                <div class="card-body">
+                    <div class="name-of-team text-center">
+                        <h5>{{ $teamMember['name'] }}</h5>
+                    </div>
+                    <hr>
+                    <div class="role-of-team text-center">
+                        <h6>{{ $teamMember['role'] }}</h6>
+                    </div>
+                </div>
             </div>
-          </div>
-        </a>
-    </div>
-    <!-- single team ends here -->
-   
-    <!-- single team container -->
-    <div class="single-team-container col-sm-12 col-md-6 col-lg-4">
-        <a href="blog.html">
-        <div class="card">
-            <img src="img/img.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="name-of-team text-center"><h5>John Doe</h5></div><hr>
-              <div class="role-of-team text-center"><h6>PHP Developer</h6></div>
-            </div>
-          </div>
-        </a>
-    </div>
-    <!-- single team ends here -->
-   
-    <!-- single team container -->
-    <div class="single-team-container col-sm-12 col-md-6 col-lg-4">
-        <a href="blog.html">
-        <div class="card">
-            <img src="img/img.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-              <div class="name-of-team text-center"><h5>John Doe</h5></div><hr>
-              <div class="role-of-team text-center"><h6>PHP Developer</h6></div>
-            </div>
-          </div>
-        </a>
-    </div>
-    <!-- single team ends here -->
+        </div>
+        <!-- Single team ends here -->
+    @endforeach
+    
+</div>
 
-   
     </div>
      
 </div>

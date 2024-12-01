@@ -26,28 +26,29 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{route('index')}}">Home</a>
+                        <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" aria-current="page" href="{{route('index')}}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('blogs')}}">Blog</a>
+                        <a class="nav-link {{ Request::is('blogs') ? 'active' : '' }}" href="{{route('blogs')}}">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('about')}}">About Us</a>
+                        <a class="nav-link {{ Request::is('about-us') ? 'active' : '' }}" href="{{route('about')}}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('services')}}">Services</a>
+                        <a class="nav-link {{ Request::is('services') ? 'active' : '' }}" href="{{route('services')}}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('team')}}">Team</a>
+                        <a class="nav-link {{ Request::is('team') ? 'active' : '' }}" href="{{route('team')}}">Team</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+                        <a class="nav-link {{ Request::is('contact-us') ? 'active' : '' }}" href="{{route('contact')}}">Contact Us</a>
                     </li>
 
 
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form class="d-flex" role="search" method="post" action="{{route('search_blog')}}">
+                    @csrf
+                    <input class="form-control me-2" name="search_blog" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>

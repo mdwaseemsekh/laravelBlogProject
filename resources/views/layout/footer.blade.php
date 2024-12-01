@@ -47,9 +47,9 @@
                         Our Clients
                     </h5>
                     <div class="row">
-                        <img src="{{ asset('img/brand1.jpg') }}" alt="" class="img-fluid w-25 h-100 m-2">
-                        <img src="{{ asset('img/brand2.jpg') }}" alt="" class="img-fluid w-25 h-100 m-2">
-                        <img src="{{ asset('img/brand3.jpg') }}" alt="" class="img-fluid w-25 h-100 m-2">
+                        <img src="" alt="" class="img-fluid w-25 h-100 m-2">
+                        <img src="" alt="" class="img-fluid w-25 h-100 m-2">
+                        <img src="" alt="" class="img-fluid w-25 h-100 m-2">
 
                     </div>
                 </div>
@@ -57,9 +57,7 @@
 
             <div class="copyright mt-6">
                 <div class="row container">
-                    <div class="footer-1 col-lg-3 col-md-6 col-sm-12">
-                        <img src="{{asset('img/payment.jpg')}}" alt="payment-image">
-                    </div>
+                   
                     <div class="footer-1 col-lg-3 col-md-6 col-sm-12 text-center">
                         <p>
                             <i class="fa-regular fa-copyright"></i>
